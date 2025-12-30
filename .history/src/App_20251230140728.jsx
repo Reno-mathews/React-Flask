@@ -3,7 +3,7 @@ import { useState } from "react";
 function App() {
     return (
         <div className="min-h-screen bg-gray-100 flex items-center justify-center">
-            <h1 className="text-3xl font-bold text-blue-600">
+            <h1 className="text-3Xl font-bold text-blue-600">
                 Tail Wind is Working
             </h1>
         </div>
