@@ -49,9 +49,21 @@ return (
         <button onClick={addTask}>Add</button>
 
         <ul>
-          {tasks.map(t => (
-            <li
-          ))}
+            {tasks.map((task,index) => (
+                <li key={index}>
+                    {task}
+                    <button 
+                      onClick={() => 
+                        setTasks(tasks.filter((_, i) => i !== index))
+                      }
+                    >
+                      ❌
+                    </button>
+                </li>
+            ))}
         </ul>
+    </div>
+  );
+}
 
 export default App
