@@ -2,14 +2,8 @@ import { useState } from 'react'
 
 
 function App() {
-  const [task, setTask] = useState("");
-  const [tasks, setTasks] = useState([]);
-
-  useEffect(() => {
-    fetch("http://localhost:5000/tasks")
-      .then(res => res.json())
-      .then(data => setTasks(data));
-  }, []);
+const [task, setTask] = useState("");
+const [tasks, setTasks] = useState([]);
 
 
 function addTask() {
@@ -17,7 +11,7 @@ function addTask() {
 
     fetch("http://localhost:5000/tasks", {
     method: "POST",
-    headers: {"Content-Type":"application/json"},
+    headers: {"Content-Type":"Application/json"},
     body: JSON.stringify({text: task})
   })
     .then(res => res.json())
