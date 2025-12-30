@@ -47,13 +47,10 @@ return (
             value={task}
             onChange={(e) => setTask(e.target.value)}
             placeholder="Enter a Task"
-            className="flex-1 border rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400"
+            className="flex-1 border rounded px-3 py-2 focus:outline-none"
           />
 
-        <button 
-          onClick={addTask
-          className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600"  
-          }>Add</button>
+        <button onClick={addTask}>Add</button>
 
         <ul>
           {tasks.map(t => (
